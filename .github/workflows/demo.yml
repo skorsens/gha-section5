@@ -44,6 +44,8 @@ jobs:
         with:
             name: dist-files
       - name: Output the folders
-        run: ls ..
+        run: ls
+      - name: Output JS file name
+        run: echo "${{ needs.build.outputs.script-file }}"
       - name: Deploy
         run: echo "Deploying..."
